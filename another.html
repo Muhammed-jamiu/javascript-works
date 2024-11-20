@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #output:hover {
+        cursor: pointer;
+      }
+      #message {
+        color: green;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+      #loadPage {
+        height: 100px;
+        width: 100px;
+        background-color: goldenrod;
+        border: 2px solid goldenrod;
+        border-radius: 50%;
+        display: block;
+        /* transition: all 2000ms ease-in-out; */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message"></div>
+    <div id="output"></div>
+
+    <div id="loadPage"></div>
+    <script>
+      let loadPage = document.getElementById("loadPage");
+
+      window.onload = function () {
+        // setTimeout(() => {
+        // }, 1000);
+        loadPage.addEventListener("click", color);
+      };
+
+      function color() {
+        let red = Math.floor(Math.random() * 255);
+        let blue = Math.floor(Math.random() * 255);
+        let green = Math.floor(Math.random() * 255);
+
+        this.style.backgroundColor = `rgba(${red},${green},${blue},${1})`;
+        this.style.borderColor = `rgba(${blue},${green},${red},${1})`;
+      }
+      //       let myFriends = [
+      //         "Musa",
+      //         "Hashid",
+      //         "Abbas",
+      //         "Usman",
+      //         "Luqman",
+      //         "Ahmad",
+      //         "Faridah",
+      //         "Khadijah",
+      //         "Bilikis",
+      //         "Abdulqodus",
+      //       ];
+      // build()
+      //       let message = document.getElementById("message");
+      //       function build() {
+      //         let html= "<h1>MY FRIENDS</h1><table>";
+      //             myFriends.forEach((name, index)=>{
+      //                 html+=`<tr class="box"  data-row="${index++}" data-name="${name}" onclick="getData(this)">
+      //                     <td>${name}</>;
+      //                     `
+      //                     `<td>${index++}</td></tr>`
+      //             })
+      //             html+=`</table>`
+      //                document.getElementById("output").innerHTML = html;
+      //       }
+      //        function getData(el) {
+      //       let temp = el.getAttribute("data-row");
+      //       let tempName = el.getAttribute("data-name");
+      //       message.textContent = `${tempName } is in row #${temp}`;
+      //       }
+
+      const message = document.querySelector("#message");
+      const myArray = [
+        "Muhammed",
+        "Musa",
+        "Hashid",
+        "Luqman",
+        "Khadijah",
+        "Nafisat",
+        "Latifah",
+        "Faridah",
+        "Abdulrahim",
+      ];
+      build();
+      //addClicks();
+      function build() {
+        let html = "<h1>My Friends Table</h1><table>";
+        myArray.forEach((item, index) => {
+          html += `<tr class="box" data-row="${index++}"
+      data-name="${item}" onclick="getData(this)">
+      <td>${item}</td>`;
+          html += `<td >${index++}</td></tr>`;
+        });
+        html += "</table>";
+        document.getElementById("output").innerHTML = html;
+      }
+      document.querySelector(
+        "#output"
+      ).innerHTML += `<button onclick="showMessage()">Click Here</button>`;
+      document.querySelector("#output").innerHTML += `<h2>Hello</h2>
+      <table>
+        <th></th>
+          <tr>
+            <td>I am inside the Table</td>
+            </tr>
+        </table>`;
+
+      function showMessage() {
+        alert("Hello! World");
+      }
+      function getData(el) {
+        let temp = el.getAttribute("data-row");
+        let tempName = el.getAttribute("data-name");
+        message.textContent = `${tempName} is in row #${temp}`;
+      }
+    </script>
+  </body>
+</html>

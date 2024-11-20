@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <button>
+        Button 1
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+      <button>
+        Button 2
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <button>
+        Button 3
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <script>
+      let btns = document.querySelectorAll("button");
+      function btnsloop(el) {
+        btns.forEach((btn, index) => {
+          console.log(btn.parentElement);
+        });
+      }
+      btnsloop(this);
+    </script>
+  </body>
+</html>

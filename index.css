@@ -1,0 +1,64 @@
+button {
+  color: white;
+  background-color: green;
+  text-align: center;
+  font-size: 19px;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 7px;
+}
+
+body {
+  background-color: gray;
+  margin: 50px;
+}
+
+.container {
+  margin: 50px auto;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: skyblue;
+  border: 2px solid red;
+  border-radius: 10px;
+}
+
+h2 {
+  color: white;
+}
+
+input {
+  padding: 10px;
+  width: 300px;
+  border-radius: 10px;
+  border: 2px solid green;
+}
+
+input::placeholder {
+  color: red;
+  letter-spacing: 3px;
+  font-size: 20px;
+}
+
+#errorMessage {
+  color: red;
+  border: 2px solid gray;
+  background-color: yellow;
+  width: 400px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  visibility: hidden;
+}
+
+h2 {
+  text-align: center;
+}

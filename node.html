@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="./images//vscode.jpg">
+    <style>
+.parag{
+    color: red;
+    display: none;
+    border: 2px solid green;
+    text-align: center;
+    background-color: #aaccdd;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+
+div {
+height: 70px;
+width: 70px;
+background-color: white;margin: 10px;
+border-radius: 10px;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 15px;
+}
+element{
+color: red;
+border: 2px solid goldenrod;
+margin: 10px;
+display: block;
+width: 100px;
+text-align: center;
+padding: 3px;
+border-radius: 10px;
+cursor: pointer;
+font-size: 20px;
+}
+
+#box-con{
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    display: flex;
+    visibility: hidden;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    transition: all 5000ms 300ms linear;
+    
+}
+.use{
+    display: none;
+}
+.still{
+    background-color: darkgoldenrod;
+    height: 100px;
+    margin: 20px;
+    border-radius: 10px;
+    transform: rotate(50deg);
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    visibility: visible;
+    align-items: center;
+}
+#all-container{
+    background: green;
+    /* display: flex; */
+}
+span{
+    transform: rotate(-50deg);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+.circle{
+    border-radius: 50%;
+}
+section{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    height: 100px;
+    /* border-radius: 50%; */
+}
+strong{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+
+    <section class="section" id="shape">
+        <strong>Working</strong>
+    </section>
+    <br>
+    <button onclick="changeAttr()">Change Attributes...</button>
+    <!-- <div id="main">
+        <h2 id="first">
+           Hello! World!!!
+        </h2>
+        <button onclick="deleteText(sakeName(2))">Change Color</button>
+        <element onclick="suprise()" >Submit</element>
+        <div class="parag">
+            <p>FIRST</p>
+            <p>SECOND</p>
+            <p>THIRD</p>
+        </div>
+       <button onclick="doSomeThing(this)">Click Some thing</button>
+    </div> -->
+   <!-- <section>
+    <div id="red"></div>
+<div id="orange"></div>
+<div id="yellow"></div>
+<div id="green"></div>
+<div id="blue"></div>
+<div id="indigo"></div>
+<div id="violet"></div>
+<div id="goldenrod"></div>
+   </section> -->
+
+<br><br>
+<button onclick="rainbowify()">Make me a rainbow</button>
+
+<br><br><br>
+<button onclick="yes(this)">Button 1</button>
+<br><br><br>
+<button onclick="no(this)">Button 2</button>
+
+<div id="box-con">
+    <!-- <div id="div1">Box one</div>
+    <div id="div2">Box two</div>
+    <div id="div3">Box Three</div> -->
+</div>
+<button onclick="submitBtn()">Submit</button>
+
+<article id="all-container" class=" use">
+    <span>We are Moving</span>
+</article>
+<br><br>
+<button onclick="toggle()">Toggle Button</button>
+    <script type="text/javascript">
+function no(el) {
+    console.dir(`This is ${el.textContent="Hello! Button!!!"}`)
+}
+function toggle() {
+    
+    let allContainer= document.getElementById("all-container").classList.toggle("still")
+}
+// let still =document.querySelector(".still")
+// if (still.style.visibility ==="visible") {
+//     allContainer.style.cl= "none"
+    
+
+function changeAttr() {
+    let el=document.getElementById("shape");
+el.setAttribute("style","background-color:red;border:2px solid blue");
+el.setAttribute("id","new")
+el.setAttribute("class","circle")
+}
+
+// }else{
+//     allContainer.style= "hidden"
+// }
+
+
+
+// function isToggle() {
+//     if (btn.style.display==="none") {
+//         btn.style.display="flex or block"
+//     }
+//     else btn.style.display="none"
+// }
+function yes(el) {
+    console.log(`This is ${el.innerText}`)
+}
+function submitBtn() {}
+    
+    function doSomeThings() {
+         btnCon=document.getElementById("box-con")
+        btnCon.style.visibility="visible"
+        btnCon.style.backgroundColor="black"
+        if (btnCon.style.backgroundColor==="black") {
+            btnCon.style.backgroundColor="green"
+        }
+        else if (btnCon.style.backgroundColor="green") {
+            btnCon.style.backgroundColor="red"
+        }
+            btnCon.style.width="100%"
+    }
+    setInterval(doSomeThings, 3000);
+    clearInterval(doSomeThings, 2000)
+
+
+
+        function doSomeThing(el){
+console.log(el.parentElement.childNodes[3].innerText);
+
+        }
+
+        ///\\\\\//////\\\\
+        function rainbowify(){
+    let divs = document.getElementsByTagName("div");
+        for(var i = 0; i < divs.length; i++) 
+        {
+    
+            divs[i].style.backgroundColor += divs[i].id;
+}
+console.log(i);
+
+}
+        /////
+
+
+        let disappear= document.querySelector(".parag")
+        // console.log(disappear);
+        
+        console.log(document.getElementsByTagName("div").namedItem("one"));
+        
+        // console.log("Hello! World")  
+        const suprise=(el)=>{
+            console.log("Wonderfull");
+        
+        }
+        // console.log(deleteText());
+        
+console.log(document.getElementsByClassName("parag"))
+
+
+// show.style.display="none"
+        function deleteText() {
+            // console.log(e);
+            
+             document.body.firstChild.nextSibling.nextSibling.nextSibling.previousSibling.previousSibling.children.first.style.color="red"
+        }
+        function sakeName(input) {
+            if (disappear.style.display==="none")disappear.style.display="block"
+            
+            else {disappear.style.display="none"
+                    disappear.style.backgroundColor="blue"
+        }
+        }
+    </script>
+</body>
+</html>
